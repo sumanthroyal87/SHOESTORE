@@ -1,5 +1,10 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
+ 
+// Set base URL for API calls
+axios.defaults.baseURL = import.meta.env.PROD 
+  ? 'https://shoestore-0rxi.onrender.com' 
+  : '';
 
 const AuthContext = createContext();
 
