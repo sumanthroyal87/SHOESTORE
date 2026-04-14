@@ -1,0 +1,237 @@
+/* ========== Product Detail ========== */
+.product-detail {
+  display: flex;
+  gap: 40px;
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.product-detail-image {
+  width: 45%;
+  flex-shrink: 0;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.product-detail-info {
+  flex: 1;
+}
+
+.product-detail-brand {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-lighter);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-detail-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 8px 0 16px;
+}
+
+.product-detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--warning);
+  margin-bottom: 16px;
+}
+
+.product-detail-rating span {
+  color: var(--text-light);
+}
+
+.product-detail-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.product-detail-price .current-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.product-detail-price .original-price {
+  font-size: 18px;
+  color: var(--text-lighter);
+  text-decoration: line-through;
+}
+
+.product-detail-price .discount {
+  font-size: 14px;
+  color: var(--success);
+  font-weight: 600;
+  background: #d4edda;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.product-detail-desc {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Size Selector */
+.size-selector,
+.color-selector {
+  margin-bottom: 20px;
+}
+
+.size-selector h4,
+.color-selector h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.size-options,
+.color-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.size-option {
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: var(--bg-white);
+}
+
+.size-option:hover,
+.size-option.selected {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: white;
+}
+
+.color-option {
+  padding: 6px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: var(--bg-white);
+}
+
+.color-option:hover,
+.color-option.selected {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Quantity */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.quantity-selector h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.quantity-controls button {
+  padding: 8px 14px;
+  background: var(--bg);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  padding: 8px 16px;
+  font-weight: 500;
+}
+
+.product-detail-stock {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.product-detail-stock.in-stock {
+  color: var(--success);
+}
+
+.product-detail-stock.out-of-stock {
+  color: var(--accent);
+}
+
+.product-detail-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.product-detail-actions .btn {
+  padding: 14px 32px;
+  font-size: 15px;
+}
+
+.product-detail-meta {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.product-detail-meta p {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.product-detail-meta strong {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+  }
+
+  .product-detail-image {
+    width: 100%;
+  }
+
+  .product-detail-image img {
+    height: 300px;
+  }
+
+  .product-detail-name {
+    font-size: 22px;
+  }
+}
